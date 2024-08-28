@@ -1,0 +1,195 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5dc; /* Beige color for the entire page */
+}
+
+/* Angular Material Toolbar Styles */
+.app-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+   /* background-color: #006d5b; /* Teal green background */
+    background: linear-gradient(135deg, rgba(255, 0, 150, 0.8), rgba(0, 204, 255, 0.8));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 10; /* Ensure it stays on top */
+    height: 60px; /* Adjust height */
+}
+
+.toolbar-logo {
+    height: 100%;
+    object-fit: contain; /* Maintain aspect ratio */
+    max-height: 100%; /* Ensure it does not exceed the toolbar height */
+    flex-grow: 1; /* Allow logos to grow and fill space */
+}
+
+.tcs-logo, .iag-logo {
+    height: 100%;
+    width: auto; /* Maintain aspect ratio */
+}
+
+.tcs-logo {
+    max-width: 150px; /* Adjust width as needed */
+    flex-basis: 0; /* Allow flexibility */
+}
+
+.iag-logo {
+    max-width: 180px; /* Adjust width as needed */
+    flex-basis: 0; /* Allow flexibility */
+}
+
+.toolbar-title {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Ensure content below toolbar is not hidden */
+body {
+    padding-top: 60px; /* Height of the toolbar */
+}
+
+/* Login Container Styles */
+.login-container {
+    /*position: relative; */
+    height: 590px;  /* Adjusted for toolbar */
+    width: 100%;
+    background: url('/CVT_bg.jpg') no-repeat center center fixed;
+    background-size:100%;
+    display: flex;
+   justify-content: center;
+    align-items: center;
+    background-color:black;
+    
+   
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better readability */
+    max-width: fit-content;
+}
+
+.login-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 400px;
+  /*  background: linear-gradient(135deg, rgba(0, 109, 91, 0.8), rgba(0, 204, 255, 0.8));
+   background: #006d5b;*/
+   background: linear-gradient(135deg, rgba(255, 0, 150, 0.8), rgba(0, 204, 255, 0.8));
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 10px;
+    animation: slideIn 1s ease-out;
+}
+
+h2 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: background-color 0.3s ease;
+}
+
+.input-group input:focus {
+    background-color: #e0f7fa;
+    outline: none;
+}
+
+.error {
+    color: #ff1744;
+    font-size: 20px;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color:rgba(0, 204, 255, 0.8);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(0, 204, 255, 0.8);
+    transform: scale(1.05);
+}
+
+.signup {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.signup a:hover {
+    color: #ffeb3b;
+}
+
+.background-overlay{
+    background:fixed
+}

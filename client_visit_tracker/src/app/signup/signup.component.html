@@ -1,0 +1,127 @@
+
+
+
+<div>
+    <mat-toolbar class="app-toolbar">
+        <img src="/tcs_logo.png" alt="TCS Logo" class="toolbar-logo tcs-logo">
+        <span class="toolbar-title">Client Visit Tracker</span>
+        <img src="/IAG_logo.png" alt="IAG Logo" class="toolbar-logo iag-logo">
+    </mat-toolbar>
+    </div>
+
+    <div class="signup-container">
+        <div class="background-overlay"></div>
+        <div class="signup-content">
+         <!--  <h4>Client Visit Tracker</h4>   -->
+          <!--   <h4 class="toolbar-title">Sign Up</h4>  --> 
+          <h4 class="signup_title">Enter the details to signup</h4>
+            <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+                <div class="input-group">
+                    <input
+                        type="text"
+                        name="name"
+                        [(ngModel)]="name"
+                        placeholder="Name"
+                        required
+                        #nameField="ngModel"
+                    />
+                    <div *ngIf="nameField.invalid && nameField.touched" class="error">
+                        Name is required
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input
+                        type="text"
+                        name="employeeId"
+                        [(ngModel)]="employeeId"
+                        placeholder="Employee ID"
+                        required
+                        #employeeIdField="ngModel"
+                    />
+                    <div *ngIf="employeeIdField.invalid && employeeIdField.touched" class="error">
+                        Employee ID is required
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input
+                        type="email"
+                        name="email"
+                        [(ngModel)]="email"
+                        placeholder="Email ID"
+                        required
+                        #emailField="ngModel"
+                    />
+                    <div *ngIf="emailField.invalid && emailField.touched" class="error">
+                        Valid Email ID is required
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input
+                        type="text"
+                        name="role"
+                        [(ngModel)]="role"
+                        placeholder="Role"
+                        required
+                        #roleField="ngModel"
+                    />
+                    <div *ngIf="roleField.invalid && roleField.touched" class="error">
+                        Role is required
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="password-wrapper">
+                        <input
+                            type="{{ showPassword ? 'text' : 'password' }}"
+                            name="password"
+                            [(ngModel)]="password"
+                            placeholder="Password"
+                            required
+                            #passwordField="ngModel"
+                        />
+                        <i class="eye-icon" (click)="togglePassword()">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/visible.png" *ngIf="!showPassword" alt="Show Password" />
+                            <img src="https://img.icons8.com/ios-filled/50/000000/invisible.png" *ngIf="showPassword" alt="Hide Password" />
+                        </i>
+                    </div>
+                    <div *ngIf="passwordField.invalid && passwordField.touched" class="error">
+                        Password is required
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="password-wrapper">
+                        <input
+                            type="{{ showConfirmPassword ? 'text' : 'password' }}"
+                            name="confirmPassword"
+                            [(ngModel)]="confirmPassword"
+                            placeholder="Confirm Password"
+                            required
+                            #confirmPasswordField="ngModel"
+                        />
+                        <i class="eye-icon" (click)="toggleConfirmPassword()">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/visible.png" *ngIf="!showConfirmPassword" alt="Show Password" />
+                            <img src="https://img.icons8.com/ios-filled/50/000000/invisible.png" *ngIf="showConfirmPassword" alt="Hide Password" />
+                        </i>
+                    </div>
+                    <div *ngIf="confirmPasswordField.invalid && confirmPasswordField.touched" class="error">
+                        Confirm Password is required
+                    </div>
+                </div>
+                <button type="submit" class="btn" [disabled]="signupForm.invalid">Sign Up</button>
+                <p class="login-link">Already have an account? <a href="#">Log in</a></p>
+                <div *ngIf="successMessage" class="success">
+                    {{ successMessage }}
+                </div>
+               <div *ngIf="errorMessage" class="error">
+                    {{ errorMessage }}
+                </div>  
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+

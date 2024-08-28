@@ -1,0 +1,220 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background setup */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Angular Material Toolbar Styles */
+.app-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+   /* background-color: #006d5b; /* Teal green background */
+    background: linear-gradient(135deg, rgba(255, 0, 150, 0.8), rgba(0, 204, 255, 0.8));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 10; /* Ensure it stays on top */
+    height: 60px; /* Adjust height */
+}
+
+.toolbar-logo {
+    height: 100%;
+    object-fit: contain; /* Maintain aspect ratio */
+    max-height: 100%; /* Ensure it does not exceed the toolbar height */
+    flex-grow: 1; /* Allow logos to grow and fill space */
+}
+
+.tcs-logo, .iag-logo {
+    height: 100%;
+    width: auto; /* Maintain aspect ratio */
+}
+
+.tcs-logo {
+    max-width: 150px; /* Adjust width as needed */
+    flex-basis: 0; /* Allow flexibility */
+}
+
+.iag-logo {
+    max-width: 180px; /* Adjust width as needed */
+    flex-basis: 0; /* Allow flexibility */
+}
+
+.toolbar-title {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Ensure content below toolbar is not hidden */
+body {
+    padding-top: 60px; /* Height of the toolbar */
+}
+
+
+
+.signup-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: url('/CVT_background.jfif') no-repeat center center fixed;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Padding to prevent overflow */
+    background-color: white;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+}
+
+.signup-content {
+    margin-top: 75px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 320px; /* Reduced width for compact form */
+    background: linear-gradient(135deg, rgba(255, 0, 150, 0.8), rgba(0, 204, 255, 0.8));
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    height:500px;
+}
+
+/* Heading styles */
+h1 {
+    color: #fff;
+    font-size: 20px; /* Reduced font size */
+    margin-bottom: 8px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 14px; /* Reduced font size */
+    margin-bottom: 16px;
+}
+
+/* Input and error styles */
+.input-group {
+    margin-bottom: 15px; /* Reduced margin */
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px; /* Reduced padding */
+    border: none;
+    border-radius: 20px; /* Rounded input fields */
+    font-size: 14px; /* Adjusted font size */
+    background: rgba(255, 255, 255, 0.9);
+    transition: background-color 0.3s ease;
+}
+
+.input-group input:focus {
+    background-color: #e0f7fa;
+    outline: none;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.eye-icon img {
+    width: 20px; /* Smaller icon size */
+    height: 20px;
+}
+
+.error {
+    color: #ff1744;
+    font-size: 12px; /* Reduced font size */
+    position: absolute;
+    bottom: -18px; /* Adjusted position */
+    left: 0;
+    width: 100%;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px; /* Reduced padding */
+    border: none;
+    border-radius: 20px; /* Rounded button */
+    background-color: #ff5722;
+    color: white;
+    font-size: 14px; /* Adjusted font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+.login-link {
+    color: #fff;
+    margin-top: 15px; /* Reduced margin */
+    font-size: 12px; /* Adjusted font size */
+}
+
+.login-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #ffeb3b;
+}
+
+
+.success {
+    color: #4caf50; /* Green color for success messages */
+    font-size: 14px; /* Adjusted font size */
+    margin-top: 10px; /* Space above the success message */
+}
+
+.background-overlay{
+    background:white
+}
+
+
+.signup_title{
+    color: white;
+    font-size: 20px;
+}
